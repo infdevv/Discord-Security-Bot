@@ -577,5 +577,5 @@ with open("config.js") as token_file:
     # js file lol
 
 
-bot.run('MTE0NjIyNzY3MzY5MDAyNTk5Nw.GsR8L1.VDFPX0JgMFoKHHgvB4mrS7_FjUeay_xLpgt2wo')
+bot.run(token)
 
