@@ -3,7 +3,7 @@
 # Discord Security Bot
 
 
-<img src="https://media.tenor.com/0LcesVI9iv4AAAAC/niko-one-shot.gif"  width="200" height="200">
+<img src="https://cdn.discordapp.com/attachments/1148097958085136424/1155993358234296410/output-onlinegiftools.gif"  width="200" height="200">
 
 
 
