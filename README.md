@@ -3,7 +3,8 @@
 # Discord Security Bot
 
 
-![Niko!!!](https://media.tenor.com/8QTiEfTe1RoAAAAi/niko-oneshot.gif)
+![Niko](https://media.tenor.com/8QTiEfTe1RoAAAAi/niko-oneshot.gif){width=200px height=150px}
+
 
 ## Overview
 
