@@ -1,0 +1,75 @@
+{
+    "1141084286234148874": {
+        "lockdown": false,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [
+            "furry"
+        ],
+        "initiator_id": [
+            1118732605165146144,
+            922149611630649374,
+            1122628222992003123,
+            1122628222992003123
+        ]
+    },
+    "1135198271111974922": {
+        "lockdown": true,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [],
+        "initiator_id": [
+            1118732605165146144
+        ]
+    },
+    "1144098071735697428": {
+        "lockdown": true,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [],
+        "initiator_id": [
+            922149611630649374
+        ]
+    },
+    "1143379916335878204": {
+        "lockdown": true,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [],
+        "initiator_id": [
+            1118732605165146144
+        ]
+    },
+    "1146553055014305812": {
+        "lockdown": true,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [],
+        "initiator_id": [
+            1118732605165146144
+        ]
+    },
+    "1134948830928969799": {
+        "lockdown": true,
+        "link_blocker": false,
+        "spam_blocker": false,
+        "raid_blocker": false,
+        "chat_filter": false,
+        "blacklist": [],
+        "initiator_id": [
+            1118732605165146144,
+            1121430916724690964,
+            957361580700475404
+        ]
+    }
+}
