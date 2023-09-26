@@ -7,28 +7,6 @@ body{
     padding: 0;
 }
 
-/*
-Lets make this code look nice: <!DOCTYPE html>
-<html>
-    <head>
-        <title>Statistics Menu</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <h1>Statistics Menu</h1>
-        <div class="content">
-            <h2>Statistics for the security bot</h2>
-            <hr>
-            <span id="actions"></span>
-            <span id="nukes-stopped"></span>
-            
-        </div>
-        <script src="script.js"></script>
-    </body>
-</html>
-
-*/
-
 span{
     font-weight: bold;
 }
