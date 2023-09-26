@@ -3,8 +3,6 @@ from discord.ext import commands, tasks
 import asyncio
 import json
 
-
-
 channel_count=0
 
 
@@ -439,7 +437,10 @@ async def on_guild_channel_create(channel):
         # Lets kick the user immediately for spamming
 
       
-        await channel.author.kick(reason=" Sec2 | Auto kick for spamming channel creation ")
+        await channel.author.kick(reason=" Sec2 | Auto kick for spamming channel creation")
+
+        anti_nuke_amount = anti_nuke_amount + 1
+        save_stats()
 
         channel_count = 0
         
@@ -472,6 +473,9 @@ async def on_guild_channel_delete(channel):
     if (channel_count_del > 2):
         await channel.author.kick(reason="Sec2 | Auto kick for spamming channel deletion")
 
+        anti_nuke_amount = anti_nuke_amount + 1
+        save_stats()
+
         channel_count_del = 0
 
 @bot.event
@@ -498,16 +502,7 @@ async def on_message(message):
             if (verified_bot == True):
                 return
 
-            # Lets check if a discord invite link is in the message
-            
-            if "discord.gg/" in message.content:
-                if (message.author == bot.user):
-                    return
-                if (message.author == bot.user):
-                    await message.delete()
-                    await message.channel.send(f"Auto kick for sending a bot sending a discord invite link \n If you think this is a mistake, reinvite the bot at ||https://discord.com/api/oauth2/authorize?client_id={message.author.id}&permissions=8&scope=bot ||")
-                else:
-                    return
+            message.author.kick(reason="Unverified bot pinging")
             
                
 
@@ -547,9 +542,24 @@ async def on_message(message):
             if "http" in message.content:
                 await message.delete()
                 await message.channel.send("You cannot send links in this server")
+                anti_link_amount = anti_link_amount + 1
+                save_stats()
                 return
     except Exception as e:
         print(f"An error occurred: {str(e)}")
+
+anti_link_amount = 0
+anti_nuke_amount = 0
+
+stats_form = {
+    "Stopped-nukes": (anti_nuke_amount),
+    "Stopped-links": (anti_link_amount),
+}
+def save_stats(file_name='stats.json'):
+    with open(file_name, 'w+') as f:
+        # Lets write the stats to the file if its not already there
+        json.dump(stats_form, f)
+        
 
 
 @bot.event
@@ -571,6 +581,7 @@ async def on_member_update(before, after):
             await after.kick(reason="Auto kick for getting dangerous permissions")
             # Lets tell the guild owner that the user was kicked
             await after.guild.owner.send(f"{after} was kicked for getting dangerous permissions. This was done via the anti nuke feature")
+            save_guild_data(type)
             
 with open("config.js") as token_file:
     eval(token_file.read())
